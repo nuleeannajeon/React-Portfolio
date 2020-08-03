@@ -1,0 +1,147 @@
+{
+  "main": {
+    "name":"Anna Jeon",
+    "occupation":"Full Stack Web Developer",
+    "image":"annaimage.png",
+    "bio":"I am a full-stack web developer in Toronto, Canada. I had attended Seneca College in Travel and Tourism and University of Toronto Bootcamp further explored new skills and strengths in Web Development. I have a passion for learning new skills, designing, creating intuitive, and dynamic user experience.",
+    "contactmessage":"Let's create something unique together!",
+    "email": "nuleeannajeon@gmail.com",
+    "phone": "(647)549-5587",
+    "address":{
+      "street":"Pemberton Avenue",
+      "city":"Toronto",
+      "state":"ON",
+      "zip": "M2M 4L9"
+    },
+    "website": "http://www.timbakerdev.com",
+    "social":[
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/annanuleejeon/",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"github",
+        "url":"https://github.com/nuleeannajeon/",
+        "className":"fa fa-github"
+      },
+      {
+        "name":"instagram",
+        "url":"http://instagram.com/annajeon1005",
+        "className":"fa fa-instagram"
+      },
+      {
+        "name":"facebook",
+        "url":"https://www.facebook.com/anna.m.jeon",
+        "className":"fa fa-facebook"
+      }
+
+    ]
+  },
+  "resume":{
+    "skillmessage":"To become a full stack developer, my technical skills are learned, used and still learning",
+    "education":[
+      {
+        "school":"University of Toronto",
+        "degree":"BootCamp: Full Stack Web Development",
+        "graduated":"August 2020",
+        "description":"Learn full stack technical skills such as HTML, CSS, Node, React, MySQL, and MongoDB"
+      },
+      {
+        "school":"Seneca College",
+        "degree":"Travel and Tourism",
+        "graduated":"April 2016",
+        "description":""
+      }
+    ],
+    "skills":[
+      {
+        "name":"ReactJs",
+        "level":"80%"
+      },
+      {
+        "name":"Node",
+        "level":"70%"
+      },
+      {
+        "name":"HTML5",
+        "level":"90%"
+      },
+      {
+        "name":"CSS",
+        "level":"90%"
+      },
+      {
+        "name":"Javascript",
+        "level":"80%"
+      },
+      {
+        "name":"MySQL",
+        "level":"80%"
+      },
+      {
+        "name":"MongoDB",
+        "level":"70%"
+      },
+      {
+        "name":"Photoshop",
+        "level":"60%"
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"Me MyChef & I",
+        "category":"Recipe and Ingredients Application",
+        "skills": "MVC Paradigm: Node/Express/MySQL",
+        "image":"MeMyChefAndI.png",
+        "url":"https://lit-badlands-54539.herokuapp.com/"
+      },
+      {
+        "title":"PetHome",
+        "category":"Pet Adoption and Fact Search Application",
+        "skills": "Third-Party API Project",
+        "image":"PetHome.png",
+        "url":"https://nuleeannajeon.github.io/PetHome/"
+      },
+      {
+        "title":"Code Quiz",
+        "category":"Basic Coding Quiz Application",
+        "skills": "Javascript/ HTML/ CSS",
+        "image":"CodeQuiz.png",
+        "url":"https://nuleeannajeon.github.io/code-quiz/"
+      },
+      {
+        "title":"Weather Dashboard",
+        "category":"Current Weather Search Application",
+        "skills": "Open Weather API",
+        "image":"WeatherDashboard.png",
+        "url":"https://nuleeannajeon.github.io/weather-dashboard/"
+      },
+      {
+        "title":"Team Profile Generator",
+        "category":"Template Engine to generator team profiles",
+        "skills": "Node.js",
+        "image":"TemplateEngine.png",
+        "url":"https://nuleeannajeon.github.io/Template-Engine/output/team.html"
+      },
+      {
+        "title":"Eat Da Burger",
+        "category":"Burger Consumption Application",
+        "skills": "Node/ Express/ Handlebars/ MySQL",
+        "image":"EatDaBurger.png",
+        "url":"https://sheltered-mountain-51090.herokuapp.com/"
+      }
+    ]
+  },
+  "testimonials":{
+    "testimonials":[
+      {
+        "text":"Don't worry if it doesn't work right. If everything did, you'd be out of a job.",
+        "user":"Mosher's Law"
+      }
+    ]
+  }
+}
+
