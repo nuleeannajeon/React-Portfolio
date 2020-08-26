@@ -8,16 +8,19 @@ class Portfolio extends Component {
         var projectImage = 'images/portfolio/'+projects.image;
         return <div key={projects.title} className="columns portfolio-item">
            <div className="item-wrap">
-            <a href={projects.url} title={projects.title}>
+            <div className="item-wrap-box" title={projects.title}>
                <img alt={projects.title} src={projectImage} />
                <div className="overlay">
                   <div className="portfolio-item-meta">
                  <h5>{projects.title}</h5>
                      <p>{projects.category}</p>
+                     <p>{projects.skills}</p>
                   </div>
                 </div>
-              <div className="link-icon"><i className="fa fa-link"></i></div>
-            </a>
+              {/* <div className="link-icon"><i className="fa fa-link"></i></div> */}
+              <a className="project-github-link"href={projects.github}><i className="fa fa-github"></i></a>
+              <a className="project-website-link" href={projects.url}><i className="fa fa-laptop"></i></a>
+            </div>
           </div>
         </div>
       })
@@ -30,9 +33,9 @@ class Portfolio extends Component {
 
          <div className="twelve columns">
 
-            <h1>My Works</h1>
+            <h1><span>My Works</span></h1>
 
-            <div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
+            <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-halves cf">
                 {projects}
             </div>
           </div>

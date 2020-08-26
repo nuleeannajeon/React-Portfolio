@@ -636,7 +636,10 @@ input[type="checkbox"] { display: inline; }
 /* column widths */
 .row .one         { width: 8.33333%; }
 .row .two         { width: 16.66667%; }
-.row .three       { width: 25%; }
+.row .three       { 
+   width: 25%;
+   float: left;
+}
 .row .four        { width: 33.33333%; }
 .row .five        { width: 41.66667%; }
 .row .six         { width: 50%; }
@@ -646,6 +649,12 @@ input[type="checkbox"] { display: inline; }
 .row .ten         { width: 83.33333%; }
 .row .eleven      { width: 91.66667%; }
 .row .twelve      { width: 100%; }
+.row .skilleight {
+   width: 12.5%; 
+   position: relative;
+   float: left;
+   text-align: center;
+}
 
 /* Offsets */
 .row .offset-1    { margin-left: 8.33333%; }
@@ -749,14 +758,23 @@ properly.
    .row .offset-9    { margin-left: 0%; }
    .row .offset-10   { margin-left: 0%; }
    .row .offset-11   { margin-left: 0%; }
+
+   .row .skilleight {
+      width: 25%; 
+      position: relative;
+      float: left;
+      margin-top: 20px;
+   }
+   .row .small-half {
+      width: 50%;
+      float: left;
+   }
 }
 
 /* mobile narrow
 --------------------------------------------------------------- */
 @media only screen and (max-width: 460px) {
-
    .row { width: auto; }
-
 }
 
 /* larger screens

@@ -13,14 +13,13 @@ class About extends Component {
       var zip = this.props.data.address.zip;
       var phone= this.props.data.phone;
       var email = this.props.data.email;
-      var resumeDownload = this.props.data.resumedownload;
     }
 
     return (
       <section id="about">
       <div className="row" style={{textAlign: "center"}}>
          <div className="twelve columns">
-            <img className="profile-pic"  src={profilepic} alt="Tim Baker Profile Pic" />
+            <img className="profile-pic"  src={profilepic} alt="Profile Pic" />
          </div>
          <div className="twelve columns">
             <h2>Who's Anna?</h2>
@@ -39,11 +38,11 @@ class About extends Component {
                      <span>{email}</span>
 					   </p>
                </div>
-               {/* <div className="columns download">
+               <div className="twelve columns">
                   <p>
-                  <a className="button" href="http://localhost/assets/Resume.pdf" download="AnnaJeon.pdf"><i className="fa fa-download"></i>Download Resume</a>
+                  <a className="button" href="./Anna-Resume.pdf" download="AnnaJeon.pdf"><i className="fa fa-download"></i>Download Resume</a>
                   </p>
-               </div> */}
+               </div>
             </div>
          </div>
       </div>
