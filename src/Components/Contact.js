@@ -36,7 +36,7 @@ class Contact extends Component {
          <div className="row">
             <div className="eight columns">
 
-               <form action="email.php" method="post" id="contactForm" name="contactForm">
+               <form action="Sendemail.php" method="post" id="contactForm" name="contactForm">
 					<fieldset>
 
                   <div>
