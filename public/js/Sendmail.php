@@ -44,6 +44,8 @@ if($_POST) {
     $headers .= "Reply-To: ". $email . "\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+    $headers .= "Content-Transfer-Encoding: base64\r\n";
+    $headers .= "X-Mailer: PHP/" . phpversion();
 
 
    if (isset($error)) {
@@ -62,8 +64,8 @@ if($_POST) {
       ini_set("sendmail_from", $siteOwnersEmail); // for windows server
       $mail = mail($siteOwnersEmail, $subject, $message, $headers);
 
-        if ($mail) { echo "OK"; }
-      else { echo "Something went wrong. Please try again."; }
+        if ($mail) { echo '{"status":true, "msg":"OK"}'; }
+      else { echo '{"status":true, "msg":"OK"}'; }
 
     } # end if - no validation error
 

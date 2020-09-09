@@ -1,8 +1,69 @@
 import React, { Component } from 'react';
+import * as emailjs from "emailjs-com";
 
 class Contact extends Component {
-  render() {
+   constructor() {
+      super();
+      this.state = {
+        emailSent: false,
+        emailError: false,
+        emailRequired: false,
+        loading: false,
+      };
+   }
+   handleSubmit = (e) => {
+      e.preventDefault();
 
+      var state = this;
+      this.setState({loading: true})
+
+      var contactName = document.querySelector('#contactName').value;
+      var contactEmail = document.querySelector('#contactEmail').value;
+      var contactSubject = document.querySelector('#contactSubject').value;
+      var contactMessage = document.querySelector('#contactMessage').value;
+
+      var API_KEY = "user_2xQLUwuRRBgvw4fCV5lkX";
+      var TEMPLATE_ID = "template_v1WXYd99";
+
+      var template_params = {
+         name: contactName,
+         email: contactEmail,
+         subject: contactSubject,
+         message: contactMessage,
+      };
+
+      if ( contactName && contactEmail && contactMessage ){
+         emailjs.send("default_service", TEMPLATE_ID, template_params, API_KEY).then(
+            function (response) {
+            if (response.status === 200) {
+               state.setState({ emailSent: true, loading: false })
+               setTimeout(function(){
+                  state.setState({ emailSent: false })
+               }, 5000)
+            } else {
+               state.setState({ emailError: true, loading: false })
+               setTimeout(function(){
+                  state.setState({ emailError: false })
+               }, 5000)
+            }
+            },
+            function(error) {
+               state.setState({ emailError: true, loading: false })
+               setTimeout(function(){
+                  state.setState({ emailError: false })
+               }, 5000)
+            }
+         );
+      }
+      else {
+         state.setState({ emailRequired: true, loading: false })
+         setTimeout(function(){
+            state.setState({ emailRequired: false })
+         }, 5000)
+      }
+    };
+
+  render() {
     if(this.props.data){
       var name = this.props.data.name;
       var street = this.props.data.address.street;
@@ -36,7 +97,7 @@ class Contact extends Component {
          <div className="row">
             <div className="eight columns">
 
-               <form action="Sendemail.php" method="post" id="contactForm" name="contactForm">
+               <form action="" method="post" id="contactForm" name="contactForm">
 					<fieldset>
 
                   <div>
@@ -60,16 +121,17 @@ class Contact extends Component {
                   </div>
 
                   <div>
-                     <button className="submit">Submit</button>
-                     <span id="image-loader">
+                     <button onClick={this.handleSubmit} name="submit" type="submit" className="submit">Submit</button>
+                     <span className={this.state.loading === false ? 'hide-this-msg' : ''} id="image-loader">
                         <img alt="" src="images/loader.gif" />
                      </span>
                   </div>
 					</fieldset>
 				   </form>
-
-           <div id="message-warning">There was an error, please try again later</div>
-				   <div id="message-success">
+               
+           <div className={this.state.emailError === false ? 'hide-this-msg' : ''} id="message-warning">There was an error, please try again later.</div>
+				   <div className={this.state.emailRequired === false ? 'hide-this-msg' : ''} id="message-required">Please fill out all required* sections.</div>
+               <div className={this.state.emailSent === false ? 'hide-this-msg' : ''} id="message-success">
                   <i className="fa fa-check"></i>Your message was sent, thank you!<br />
 				   </div>
            </div>

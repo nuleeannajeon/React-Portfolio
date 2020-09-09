@@ -962,8 +962,7 @@ call-to-action .button {
 	color: rgb(154, 83, 235);
 	font-size: 13px;
 }
-#message-warning, #message-success {
-   display: none;
+#message-warning, #message-success, #message-required {
 	background: #0F0F0F;
 	padding: 24px 24px;
 	margin-bottom: 36px;
@@ -971,17 +970,21 @@ call-to-action .button {
    margin-left: 26%;
 }
 #message-warning { color: #D72828; }
-#message-success { color: #11ABB0; }
+#message-success { color: rgb(46, 179, 46); }
+#message-required { color: rgb(187, 47, 187) }
 
 #message-warning i,
-#message-success i {
+#message-success i,
+#message-required i {
    margin-right: 10px;
 }
 #image-loader {
-   display: none;
    position: relative;
    left: 18px;
    top: 17px;
+}
+.hide-this-msg {
+   display: none;
 }
 
 
